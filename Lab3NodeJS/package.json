@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nigibob/Lab3NodeJS.git"
+  },
+  "author": "Nelson Alamélama--Tissier / Aniket Maini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nigibob/Lab3NodeJS/issues"
+  },
+  "homepage": "https://github.com/Nigibob/Lab3NodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
+}
