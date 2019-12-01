@@ -1,18 +1,24 @@
-/*import body parser*/
+var bodyparser = require('body-parser');
+var express = require('express');
+import MetricsHandler = require('metrics');
+var app = express();
+
 app.set('port', 1111)
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded())
 
-const MetricsHandler = new MetricsHandler('./db/metrics')
+MetricsHandler = new MetricsHandler('./db/metrics')
 
-app.post('/metrics/:id', (req: any, res: any) => {
-  dbMet.save(req.params.id, req.body, (err: Error | null) => {
+app.post('/metrics/:id', (req, res) => {
+  dbMet.save(req.params.id, req.body, (err) => {
     if (err) throw err
     res.status(200).send()
   })
 })
 
-app.get('/metrics/:id', (req: any, res: any) => {
+app.get('/', (req, res) => {res.send('Hello')})
+
+app.get('/metrics/:id', (req, res) => {
 
 
 })
