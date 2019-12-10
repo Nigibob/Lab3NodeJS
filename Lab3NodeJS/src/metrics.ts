@@ -27,9 +27,15 @@ export class MetricsHandler {
       })
       stream.end()
     }
+    public delete(key: string, callback: (error: Error | null, result?: Metric[]) => void) {
+      const stream = WriteStream(this.db)
+      stream.on('error', callback)
+      stream.delete({ key: `metric:${key}${m.timestamp}`, value: m.value })
+      stream.end()
+    }
     public get(key: string, callback: (err: Error | null, result?: Metric[]) => void) {
-   const stream = this.db.createReadStream()
-   var met: Metric[] = []
+        const stream = this.db.createReadStream()
+        var met: Metric[] = []
 
    stream.on('error', callback)
      .on('data', (data: any) => {
@@ -45,5 +51,4 @@ export class MetricsHandler {
        callback(null, met)
      })
  }
-    public save
 }
