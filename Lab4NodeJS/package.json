@@ -1,0 +1,38 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r ts-node/register src/metrics.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nigibob/Lab4NodeJS.git"
+  },
+  "author": "Nelson Alamélama--Tissier / Aniket Maini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nigibob/Lab4NodeJS/issues"
+  },
+  "homepage": "https://github.com/Nigibob/Lab4NodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "del": "^5.1.0",
+    "encoding-down": "^6.3.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "level": "^6.0.0",
+    "level-session-store": "^2.2.0",
+    "level-ws": "^2.0.0",
+    "leveldown": "^5.4.1",
+    "levelup": "^4.3.2",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
